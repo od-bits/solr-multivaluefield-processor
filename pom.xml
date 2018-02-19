@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.od-bits.solr.update.processor</groupId>
+	<artifactId>solr-multivaluefield-processor</artifactId>
+	<version>1.0</version>
+	<name>SOLR Mulivaluefield Processor</name>
+	<description>Solr update request processor for creating new multivalue field by parsing some text field</description>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<solr.version>6.6.2</solr.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-core</artifactId>
+			<version>${solr.version}</version>
+		</dependency>
+	</dependencies>
+</project>
