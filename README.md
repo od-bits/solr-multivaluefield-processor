@@ -12,7 +12,7 @@ Solr update request processor for creating new multivalue field by parsing some 
 * copy created jar to contrib
 `docker cp target/solr-multivaluefield-processor-*.jar multivalue:/opt/solr/contrib/`
 * create test core
-`docker exec -it multivalue bin/solr create_core -c min -d basic_configs`
+`docker exec -it multivalue bin/solr create_core -c multivalue -d basic_configs`
 * override solrconfig.xml with one with custom updateRequestProcessor
 `docker cp src/test/resources/solrconfig.xml multivalue:/opt/solr/server/solr/multivalue/conf/`
 * reload core
@@ -20,4 +20,4 @@ Solr update request processor for creating new multivalue field by parsing some 
 * index test doc
 `curl -XPOST 'localhost:8983/solr/multivalue/update?commit=true&wt=json&indent=true' -d '[{"id": 1, "tags_txt": "solr facet"}]'`
 * query docs to see that tags_ss is added
-`curl 'localhost:8983/solr/min/select?wt=json&indent=true&q=*:*'`
+`curl 'localhost:8983/solr/multivalue/select?wt=json&indent=true&q=*:*'`
