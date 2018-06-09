@@ -21,3 +21,5 @@ Solr update request processor for creating new multivalue field by parsing some 
 `curl -XPOST 'localhost:8983/solr/multivalue/update?commit=true&wt=json&indent=true' -d '[{"id": 1, "tags_txt": "solr facet"}]'`
 * query docs to see that tags_ss is added
 `curl 'localhost:8983/solr/multivalue/select?wt=json&indent=true&q=*:*'`
+
+Related blog post: http://www.od-bits.com/2018/02/solr-docvalues-on-analysed-field.html
